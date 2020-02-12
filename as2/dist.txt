@@ -1,0 +1,10 @@
+Problem 2.8.
+
+a. k = 2
+b. an example file with three tokens is "0e+".
+The first token is 0 of state 2
+the second is e of state 2
+the third is + of state 3
+
+But the lexer has to look at the two more chars after 0 to determine the first
+token.

@@ -1,0 +1,10 @@
+In the lex definitions, i used a few shortcuts for digits, alphanumeric
+characters and whitespace.
+
+For the COMMENTs, I have a new state and for the nested comments I use a count
+variable to increase and decrease to know what level of nests the lexer is in.
+
+For strings, I have a new state as well which captures either a printable char
+except \ or " (i.e. [ !#-\[\]-~]). This covers space, !, from # to [, from ] to
+~. String state either captures one of these types of chars or the given escape
+sequences. Later the clean() functions replaces the escape chars properly. 

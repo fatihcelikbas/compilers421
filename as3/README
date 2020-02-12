@@ -1,0 +1,9 @@
+In the array creation vs binary op shift reduce error I set the precedence of OF
+token lower than any operation. I also made it right associative cause arr of b of
+c should have elements of type b of c.
+
+In addition for other similar shift-reduce errors involving binary operators
+against WHILE and FOR clauses I used %prec OF to set the precedence straight.
+
+Only shift-reduce left is dangling else clauses and I chose to implement the
+default behavior.
